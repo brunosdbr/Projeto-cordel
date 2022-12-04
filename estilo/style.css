@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2? família=Paixão+Um:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2? família=Sriracha&display=swap');
+
+:root{
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', cursive;;
+    --fonte3: 'Sriracha', cursiva;;
+}
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html, body{/*COLOCASSE DESSE JEITO DUAS TAGS JUNTO QUANDO SE QUER COLOCAR A MESMA CONFIGURAÇÃO PARA AS DUAS*/
+    min-height: 100vh;
+    background-color: darkgray;
+    font-family: var(--fonte1);
+}
+header{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+header > h1{
+    padding-top: 50px;
+    /*text-transform: uppercase;A TAG TEXT-TRANSFORM SERVE PARA TRANSFORMA TODA UMA ESTRUTURA TEXTUAL E UPPERCASE SERVA PARA TRANSFOMA TUDO EM MAIUSCULO*/
+    font-variant: small-caps;/*A TAG FONT-VARIANT SERVE PARA MUDARA VARIAÇÃO DA FONTE E A SMALL-CAPS É PARA COLOCAR A PRIMEIRA LETRA DE CADA DE CADA PALAVRA MAIOR*/
+    font-family: var(--fonte2);
+    font-size: 10vw;/*10vw, SIGINIFICA 10% DA VIEWPORT WIDTH OU 10% LARGURA DA TELA, SERVE PARA QUANDO DIINUIR A TELA A FONTE CONTINUAR COM 10% OU SEJA COMPANHAR E IR DIMINUINDO*/
+
+}
+header > P{
+    padding-bottom: 50px;
+}
+footer a, header a {
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+header a:hover, footer a:hover{
+    text-decoration: underline;
+}
+
+section{/*ESSAS CONFIGURAÇÕES SÃO PRA COLOCAR UM ESPAÇO ABAIXO E ACIMA DE CADA ESTROFE*/
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em;/*COLOCAR UM ESPAÇO DE DUAS VEZES ENTRE AS LINHAS*/
+    padding-left: 30px;
+    font-family: var(--fonte3);
+    font-size: 3.5vw;
+}
+section.normal{
+    background-color: white;
+    color: black;
+}
+section.imagem{
+    background-color: rgb(51, 51, 51);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px black; /*serve para colocar uma sombra nacaixa e o inset quer dizer para dentro*/
+}
+section.imagem > p{
+    display: inline-block;/*FOI FEITO PARA FAZER UMA CAIXA AO REDOR DO PARÁGRAFO*/
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.253);
+    text-shadow: 1px 1px 0px black;
+    
+    
+}
+section#img01{
+    background-image: url(../imagens/background001.jpg);/*LEMBRANDO QUE TEM QUE COLOCAR DOIS PONTOS PARA ACESAR DUAS OASTAS ANTERIORES*/
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+section#img02{
+    background-image: url(../imagens/background002.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+section>p{
+    padding-bottom: 2em;
+}
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
